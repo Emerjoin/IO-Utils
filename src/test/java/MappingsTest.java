@@ -169,4 +169,26 @@ public class MappingsTest {
 
 
     }
+
+
+    @Test
+    public void lines_that_start_or_end_with_spaces_must_be_trimmed(){
+
+
+        Map<String, String> map = Mappings.load(getTestCase(10));
+        assertEquals(2,map.size());
+
+        System.out.println(map);
+
+        String brand = map.get("brand");
+        assertNotNull(brand);
+        assertEquals("Toy ota",brand);
+
+        String model = map.get("model");
+        assertNotNull(model);
+        assertEquals("Vitz",model);
+
+
+
+    }
 }

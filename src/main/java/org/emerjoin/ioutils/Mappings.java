@@ -65,6 +65,7 @@ public class Mappings {
 
 
     private static void parseLine(int number, String line, Map<String,String> target){
+        line = line.trim();
         char[] chars = line.toCharArray();
         char prev = Character.MIN_VALUE;
         int charIndex = 0;
